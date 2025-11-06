@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Header from './Components/Common/Header/Header';
+import Footer from './Components/Common/Footer/Footer';
+import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Modal from './Components/Common/Modal/Modal';
+import { ThemeProvider } from './contexts/ThemeContext';
+import './styles/theme.scss';
 
 function App() {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Header onLoginClick={handleLoginClick} />
+        <main className="main-content">
+          <Home />
+        </main>
+        <Footer />
+        <Modal isOpen={isLoginModalOpen} onClose={handleCloseModal}>
+          <Login onClose={handleCloseModal} />
+        </Modal>
+      </div>
+    </ThemeProvider>
   );
 }
 

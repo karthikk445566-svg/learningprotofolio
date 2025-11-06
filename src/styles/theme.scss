@@ -1,0 +1,93 @@
+:root {
+  // Font
+  --font-family: 'Poppins', sans-serif;
+  
+  // Light Theme (default)
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --accent-color: #2E4052;
+  --accent-hover: #3d566d;
+  --border-color: #e5e5e5;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #2E4052;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  --inverse-text: #ffffff;
+  --card-text: #000000;
+  --heading-color: #000000;
+  --gradient-primary: linear-gradient(135deg, #2E4052 0%, #3d566d 100%);
+  --gradient-secondary: linear-gradient(135deg, #A5C9CA 0%, #8eb8b9 100%);
+  --tag-bg: rgba(46, 64, 82, 0.05);
+  --tag-text: #2E4052;
+  --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --font-mono: 'JetBrains Mono', monospace;
+  --hero-bg: #ffffff;
+  --hero-text: #000000;
+}
+
+// Dark Theme
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --accent-color: #A5C9CA;
+  --accent-hover: #8eb8b9;
+  --border-color: #333333;
+  --card-bg: #111111;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --header-bg: rgba(0, 0, 0, 0.95);
+  --footer-bg: #111111;
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --inverse-text: #000000;
+  --card-text: #ffffff;
+  --heading-color: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #111111 100%);
+  --gradient-secondary: linear-gradient(135deg, #A5C9CA 0%, #8eb8b9 100%);
+  --tag-bg: rgba(255, 255, 255, 0.1);
+  --tag-text: #ffffff;
+  --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.8);
+  --hero-bg: #000000;
+  --hero-text: #ffffff;
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+button {
+  font-family: var(--font-family);
+}
