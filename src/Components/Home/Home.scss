@@ -1,21 +1,31 @@
 @mixin mobile {
-  @media (max-width: 480px) { @content; }
+  @media (max-width: 480px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-  @media (min-width: 481px) and (max-width: 768px) { @content; }
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-  @media (min-width: 769px) { @content; }
+  @media (min-width: 769px) {
+    @content;
+  }
 }
 
 @mixin large-mobile {
-  @media (max-width: 600px) { @content; }
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 
 @mixin small-desktop {
-  @media (min-width: 769px) and (max-width: 1024px) { @content; }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
 }
 
 .home {
@@ -28,7 +38,7 @@
     opacity: 0.9;
     animation: fadeInUp 1s ease-out 0.4s both;
     letter-spacing: 0.1em;
-    
+
     @include small-desktop {
       font-size: 1.4rem;
     }
@@ -76,7 +86,7 @@
       background: transparent;
       border: 2px solid var(--accent-color);
       color: var(--accent-color);
-      
+
       &:hover {
         background: var(--accent-color);
         color: #fff;
@@ -211,13 +221,16 @@
     .hero-image {
       position: relative;
       animation: slideInRight 1s ease-out;
+      margin-top: 10px;
 
       @include tablet {
         order: -1;
+        margin-top: 50px;
       }
 
       @include large-mobile {
         order: -1;
+        margin-top: 35px;
       }
 
       @include mobile {
@@ -251,7 +264,7 @@
           width: 100%;
           height: auto;
           border-radius: 20px;
-       //   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+          //   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease;
           filter: brightness(1.1) contrast(1.1);
 
@@ -308,7 +321,7 @@
               right: -18%;
               transform: translate(50%, -50%);
               animation-delay: 0.3s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -317,7 +330,7 @@
               right: -15%;
               transform: translate(50%, -50%);
               animation-delay: 0.6s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -326,7 +339,7 @@
               right: 15%;
               transform: translate(50%, 50%);
               animation-delay: 0.9s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -335,7 +348,7 @@
               left: 50%;
               transform: translate(-50%, 50%);
               animation-delay: 1.2s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -344,7 +357,7 @@
               left: 15%;
               transform: translate(-50%, 50%);
               animation-delay: 1.5s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -353,7 +366,7 @@
               left: -15%;
               transform: translate(-50%, -50%);
               animation-delay: 1.8s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -362,7 +375,7 @@
               left: -18%;
               transform: translate(-50%, -50%);
               animation-delay: 2.1s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -371,7 +384,7 @@
               left: 25%;
               transform: translate(-50%, -50%);
               animation-delay: 2.4s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
@@ -380,59 +393,63 @@
               right: 10%;
               transform: translate(50%, -50%);
               animation-delay: 2.7s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
+
             &.sass {
-             
+
               transform: translate(-50%, 50%);
               animation-delay: 3s;
-                display: flex;
+              display: flex;
               justify-content: center;
             }
 
             // Mobile responsive adjustments
             @include mobile {
-              &.react, &.nextjs, &.typescript {
+
+              &.react,
+              &.nextjs,
+              &.typescript {
                 top: -12%;
                 transform: translate(-50%, -50%);
               }
-              
+
               &.html {
                 bottom: -12%;
                 transform: translate(-50%, 50%);
               }
-              
+
               &.js {
                 right: -12%;
                 top: 10%;
                 transform: translate(50%, -50%);
               }
-              
+
               &.css {
                 right: -12%;
                 top: 45%;
                 transform: translate(50%, -50%);
               }
-              
+
               &.node {
                 right: 10%;
                 bottom: -8%;
                 transform: translate(50%, 50%);
               }
-              
+
               &.git {
                 left: 10%;
                 bottom: -8%;
                 transform: translate(-50%, 50%);
               }
-              
+
               &.aws {
                 left: -12%;
                 top: 45%;
                 transform: translate(-50%, -50%);
               }
-              
+
               &.mongodb {
                 left: -12%;
                 top: 10%;
@@ -442,7 +459,7 @@
           }
         }
       }
-      
+
     }
   }
 
@@ -452,6 +469,7 @@
       opacity: 0;
       transform: translateX(-50px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -463,6 +481,7 @@
       opacity: 0;
       transform: translateX(50px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -474,6 +493,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -481,21 +501,28 @@
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-20px);
     }
   }
 
   @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
+
     25% {
       transform: translateY(-10px) rotate(5deg);
     }
+
     75% {
       transform: translateY(-5px) rotate(-5deg);
     }
