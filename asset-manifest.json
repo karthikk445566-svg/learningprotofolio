@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/ailearning/static/css/main.5c024e8c.css",
-    "main.js": "/ailearning/static/js/main.a18fde95.js",
-    "static/js/453.7062f8c8.chunk.js": "/ailearning/static/js/453.7062f8c8.chunk.js",
-    "static/media/irotree.jpg": "/ailearning/static/media/irotree.37e02bae4c1341261a43.jpg",
-    "static/media/skincare.jpg": "/ailearning/static/media/skincare.b99672d7350b70d11abc.jpg",
-    "static/media/inventory.jpg": "/ailearning/static/media/inventory.f95dadb4f581c97aed7a.jpg",
-    "static/media/sixth.png": "/ailearning/static/media/sixth.1aeb608b1a7bc7a71396.png",
-    "static/media/seven.png": "/ailearning/static/media/seven.5d6f95c13a2099fad132.png",
-    "static/media/forth.png": "/ailearning/static/media/forth.ccb493b66ba534598886.png",
-    "static/media/third.png": "/ailearning/static/media/third.5c6bea93aab6825fa06f.png",
-    "static/media/doctor.jpg": "/ailearning/static/media/doctor.ae4a8aaaa87f76a8d2b6.jpg",
-    "static/media/img10.png": "/ailearning/static/media/img10.573907d5d08997703b4a.png",
-    "static/media/first.png": "/ailearning/static/media/first.36321667b0464ef9bdfc.png",
-    "static/media/second.jpg": "/ailearning/static/media/second.07070ae9de482242a3da.jpg",
-    "static/media/img9.jpg": "/ailearning/static/media/img9.b297905316b322fdf3e8.jpg",
-    "static/media/fifth.jpg": "/ailearning/static/media/fifth.48184d5c4b51092536df.jpg",
-    "static/media/img8.jpg": "/ailearning/static/media/img8.e4dd42b61cc264f2fb45.jpg",
-    "index.html": "/ailearning/index.html",
-    "main.5c024e8c.css.map": "/ailearning/static/css/main.5c024e8c.css.map",
-    "main.a18fde95.js.map": "/ailearning/static/js/main.a18fde95.js.map",
-    "453.7062f8c8.chunk.js.map": "/ailearning/static/js/453.7062f8c8.chunk.js.map"
+    "main.css": "/learningprotofolio/static/css/main.5c024e8c.css",
+    "main.js": "/learningprotofolio/static/js/main.8b826dd0.js",
+    "static/js/453.7062f8c8.chunk.js": "/learningprotofolio/static/js/453.7062f8c8.chunk.js",
+    "static/media/irotree.jpg": "/learningprotofolio/static/media/irotree.37e02bae4c1341261a43.jpg",
+    "static/media/skincare.jpg": "/learningprotofolio/static/media/skincare.b99672d7350b70d11abc.jpg",
+    "static/media/inventory.jpg": "/learningprotofolio/static/media/inventory.f95dadb4f581c97aed7a.jpg",
+    "static/media/sixth.png": "/learningprotofolio/static/media/sixth.1aeb608b1a7bc7a71396.png",
+    "static/media/seven.png": "/learningprotofolio/static/media/seven.5d6f95c13a2099fad132.png",
+    "static/media/forth.png": "/learningprotofolio/static/media/forth.ccb493b66ba534598886.png",
+    "static/media/third.png": "/learningprotofolio/static/media/third.5c6bea93aab6825fa06f.png",
+    "static/media/doctor.jpg": "/learningprotofolio/static/media/doctor.ae4a8aaaa87f76a8d2b6.jpg",
+    "static/media/img10.png": "/learningprotofolio/static/media/img10.573907d5d08997703b4a.png",
+    "static/media/first.png": "/learningprotofolio/static/media/first.36321667b0464ef9bdfc.png",
+    "static/media/second.jpg": "/learningprotofolio/static/media/second.07070ae9de482242a3da.jpg",
+    "static/media/img9.jpg": "/learningprotofolio/static/media/img9.b297905316b322fdf3e8.jpg",
+    "static/media/fifth.jpg": "/learningprotofolio/static/media/fifth.48184d5c4b51092536df.jpg",
+    "static/media/img8.jpg": "/learningprotofolio/static/media/img8.e4dd42b61cc264f2fb45.jpg",
+    "index.html": "/learningprotofolio/index.html",
+    "main.5c024e8c.css.map": "/learningprotofolio/static/css/main.5c024e8c.css.map",
+    "main.8b826dd0.js.map": "/learningprotofolio/static/js/main.8b826dd0.js.map",
+    "453.7062f8c8.chunk.js.map": "/learningprotofolio/static/js/453.7062f8c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c024e8c.css",
-    "static/js/main.a18fde95.js"
+    "static/js/main.8b826dd0.js"
   ]
 }
