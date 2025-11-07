@@ -1,13 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import About from '../About/About';
 import ContactForm from '../Common/ContactForm/ContactForm';
 import img1 from "../../asset/images/first.png";
 import img2 from "../../asset/images/second.jpg";
+import img3 from "../../asset/images/third.png";
+import img4 from "../../asset/images/forth.png";
+import img5 from "../../asset/images/fifth.jpg";
+import img6 from "../../asset/images/sixth.png";
+import img7 from "../../asset/images/seven.png";
+import img8 from "../../asset/images/img8.jpg";
+import img9 from "../../asset/images/img9.jpg";
+import img10 from "../../asset/images/img10.png";
 
+
+import { FaReact, FaNodeJs, FaGitAlt, FaAws, FaSass, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiJavascript, SiNextdotjs, SiTypescript, SiMongodb, SiRedux, SiTailwindcss } from "react-icons/si";
 
 const Home = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const theme = document.documentElement.getAttribute('data-theme');
+      setIsDarkMode(theme === 'dark');
+    };
+    
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    
+    return () => observer.disconnect();
+  }, []);
 
   const handleContactClick = () => {
     setIsContactFormOpen(true);
@@ -33,15 +58,48 @@ const Home = () => {
             </div>
           </div>
           <div className="hero-image">
-            <div className="image-container">
-              <img src={img1} alt="Karthik.K - Frontend Developer" />
+            {/* <div className="image-container">
+              <img src={img3} alt="Karthik.K - Frontend Developer" />
               <div className="floating-elements">
                 <div className="floating-icon react">⚛️</div>
                 <div className="floating-icon js">🟨</div>
                 <div className="floating-icon css">🎨</div>
                 <div className="floating-icon node">🟢</div>
+                <div className="floating-icon html">🧡</div>
+                <div className="floating-icon sass">💗</div>
+                <div className="floating-icon git">🔴</div>
+                <div className="floating-icon aws">🟠</div>
+                <div className="floating-icon mongodb">🟤</div>
+                <div className="floating-icon nextjs">⚫</div>
+                <div className="floating-icon redux">🟣</div>
+                <div className="floating-icon typescript">🔵</div>
+              </div>
+            </div> */}
+
+
+            <div className="image-container">
+              <img src={isDarkMode ? img3 : img10} alt="Karthik.K - Frontend Developer" />
+                            {/* <img src={img3} alt="Karthik.K - Frontend Developer" /> */}
+              <div className="floating-elements">
+                {/* 🌐 Frontend */}
+                <div className="floating-icon react"><FaReact /></div>
+                <div className="floating-icon nextjs"><SiNextdotjs /></div>
+                <div className="floating-icon js"><SiJavascript /></div>
+                <div className="floating-icon typescript"><SiTypescript /></div>
+                <div className="floating-icon html"><FaHtml5 /></div>
+                <div className="floating-icon css"><FaCss3Alt /></div>
+                <div className="floating-icon sass"><FaSass /></div>
+                <div className="floating-icon git"><FaGitAlt /></div>
+                {/* <div className="floating-icon aws"><FaAws /></div> */}
+                <div className="floating-icon aws"><SiTailwindcss /></div>
+
+                {/* ⚙️ Backend */}
+                <div className="floating-icon node"><SiRedux /></div>
+                {/* <div className="floating-icon node"><FaNodeJs /></div> */}
+                {/* <div className="floating-icon mongodb"><SiMongodb /></div> */}
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -70,7 +128,7 @@ const Home = () => {
               <h3>Mobile</h3>
               <p>React Native, Flutter, Responsive Design</p>
             </div> */}
-           
+
           </div>
         </div>
       </section>

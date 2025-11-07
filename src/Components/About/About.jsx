@@ -1,9 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.scss';
 import ContactForm from '../Common/ContactForm/ContactForm';
+import img1 from "../../asset/images/doctor.jpg";
+import img2 from "../../asset/images/inventory.jpg";
+import img3 from "../../asset/images/skincare.jpg";
+import img4 from "../../asset/images/irotree.jpg";
 
 const About = () => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(0);
+
+  const projects = [
+    {
+      id: 1,
+      title: "Health.iQ",
+      subtitle: "Online Doctor & Nurse Learning Platform",
+      description: "Features secure authentication, structured medical courses, and interactive learning tools. Optimized for performance and user experience.",
+      tech: "React.js, RTK Query",
+      image: img1
+    },
+    {
+      id: 2,
+      title: "Womeora",
+      subtitle: "Natural Skincare & Wellness E-commerce Platform",
+      description: "Seamless shopping, wishlist/cart management, intuitive UI. Built with React.js, Redux Toolkit, RTK Query.",
+      tech: "React.js, Redux Toolkit, RTK Query",
+      image: img3
+    },
+    {
+      id: 3,
+      title: "iRotree",
+      subtitle: "Rotary International Web Design",
+      description: "Built with React and Material UI. Service organization platform for global community leaders.",
+      tech: "React, Material UI",
+      image: img4
+    },
+    {
+      id: 4,
+      title: "CorpWork",
+      subtitle: "Inventory Management System",
+      description: "Modern inventory management with React.js, Sass, RTK Query. Real-time stock, supplier, and order tracking. Responsive, user-friendly interface.",
+      tech: "React.js, Sass, RTK Query",
+      image: img2
+    }
+  ];
 
   const handleContactClick = () => {
     setIsContactFormOpen(true);
@@ -12,6 +52,23 @@ const About = () => {
   const handleCloseContactForm = () => {
     setIsContactFormOpen(false);
   };
+
+  const nextProject = () => {
+    setCurrentProject((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevProject = () => {
+    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  // Auto-scroll every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentProject((prev) => (prev + 1) % projects.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [projects.length]);
 
   return (
     <section id="about" className="about-section">
@@ -68,12 +125,38 @@ const About = () => {
           </div>
           <div className="about-cta">
             <h3>Projects</h3>
-            <ul style={{ textAlign: 'left', maxWidth: '1000px', margin: '0 auto', color: 'inherit' }}>
-              <li><strong>Health.iQ</strong> – Online Doctor & Nurse Learning Platform (React.js, RTK Query)<br />Features secure authentication, structured medical courses, and interactive learning tools. Optimized for performance and user experience.</li>
-              <li><strong>Womeora</strong> — Natural Skincare & Wellness E-commerce Platform<br />Seamless shopping, wishlist/cart management, intuitive UI. Built with React.js, Redux Toolkit, RTK Query.</li>
-              <li><strong>iRotree</strong> — Rotary International Web Design<br />Built with React and Material UI. Service organization platform for global community leaders.</li>
-              <li><strong>CorpWork</strong> — Inventory Management System<br />Modern inventory management with React.js, Sass, RTK Query. Real-time stock, supplier, and order tracking. Responsive, user-friendly interface.</li>
-            </ul>
+            <div className="projects-carousel">
+              <div className="carousel-container">
+                <button className="carousel-btn prev" onClick={prevProject}>
+                  ‹
+                </button>
+                <div className="project-slide">
+                  <div className="project-image">
+                    <img src={projects[currentProject].image} alt={projects[currentProject].title} />
+                  </div>
+                  <div className="project-content">
+                    <h4>{projects[currentProject].title}</h4>
+                    <h5>{projects[currentProject].subtitle}</h5>
+                    <p>{projects[currentProject].description}</p>
+                    <div className="project-tech">
+                      <span>Tech Stack: {projects[currentProject].tech}</span>
+                    </div>
+                  </div>
+                </div>
+                <button className="carousel-btn next" onClick={nextProject}>
+                  ›
+                </button>
+              </div>
+              <div className="carousel-dots">
+                {projects.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === currentProject ? 'active' : ''}`}
+                    onClick={() => setCurrentProject(index)}
+                  />
+                ))}
+              </div>
+            </div>
             <button className="cta-button" onClick={handleContactClick}>Get in Touch</button>
           </div>
         </div>
