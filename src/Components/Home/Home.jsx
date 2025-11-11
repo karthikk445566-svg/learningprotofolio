@@ -83,7 +83,7 @@ const Home = () => {
               <div className="floating-elements">
                 {/* 🌐 Frontend */}
                 <div className="floating-icon react"><FaReact /></div>
-                <div className="floating-icon nextjs"><SiNextdotjs /></div>
+                {/* <div className="floating-icon nextjs"><SiNextdotjs /></div> */}
                 <div className="floating-icon js"><SiJavascript /></div>
                 <div className="floating-icon typescript"><SiTypescript /></div>
                 <div className="floating-icon html"><FaHtml5 /></div>
