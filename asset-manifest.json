@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/learningprotofolio/static/css/main.c63f2795.css",
-    "main.js": "/learningprotofolio/static/js/main.8b826dd0.js",
+    "main.js": "/learningprotofolio/static/js/main.413a7120.js",
     "static/js/453.7062f8c8.chunk.js": "/learningprotofolio/static/js/453.7062f8c8.chunk.js",
     "static/media/irotree.jpg": "/learningprotofolio/static/media/irotree.37e02bae4c1341261a43.jpg",
     "static/media/skincare.jpg": "/learningprotofolio/static/media/skincare.b99672d7350b70d11abc.jpg",
@@ -19,11 +19,11 @@
     "static/media/img8.jpg": "/learningprotofolio/static/media/img8.e4dd42b61cc264f2fb45.jpg",
     "index.html": "/learningprotofolio/index.html",
     "main.c63f2795.css.map": "/learningprotofolio/static/css/main.c63f2795.css.map",
-    "main.8b826dd0.js.map": "/learningprotofolio/static/js/main.8b826dd0.js.map",
+    "main.413a7120.js.map": "/learningprotofolio/static/js/main.413a7120.js.map",
     "453.7062f8c8.chunk.js.map": "/learningprotofolio/static/js/453.7062f8c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c63f2795.css",
-    "static/js/main.8b826dd0.js"
+    "static/js/main.413a7120.js"
   ]
 }
